@@ -1,0 +1,26 @@
+{
+  "name": "fe45-landing-2-bolynskii-ewgenii",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrEwgenius/FE45-Landing-2-Bolynskii-Ewgenii.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrEwgenius/FE45-Landing-2-Bolynskii-Ewgenii/issues"
+  },
+  "homepage": "https://github.com/MrEwgenius/FE45-Landing-2-Bolynskii-Ewgenii#readme",
+  "dependencies": {
+    "server": "^1.0.38"
+  },
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "sass": "^1.57.1"
+  }
+}
