@@ -1,0 +1,27 @@
+.galery-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 378px));
+    grid-template-rows: repeat(auto, 340px);
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+.galery-image {
+    position: relative;
+    &:hover::after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 40;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 67, 67, 0.8);
+    }
+    img {
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}

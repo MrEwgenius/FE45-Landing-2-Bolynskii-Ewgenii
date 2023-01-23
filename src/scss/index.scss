@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    
+}
+
+
+@import "./_cdn.scss";
+@import "./_variables.scss";
+@import "./_mixin.scss";
+@import "./main.scss";
+@import "./description.scss";
+@import "./galery.scss";
+@import "./person.scss";
+@import "./slider.scss";
+@import "./download.scss";
+@import "./info.scss";
+@import "./footer.scss";
+
+html,
+body {
+    font-family: "Raleway", "Cardo", sans-serif;
+    // background-color: rgb(163, 151, 151);
+}
+.none {
+    display: none;
+}
+
+button {
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+main {
+    padding: 35px 0;
+}
+section {
+    padding: 100px 0;
+}
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: auto;
+    position: relative;
+    z-index: 50;
+}

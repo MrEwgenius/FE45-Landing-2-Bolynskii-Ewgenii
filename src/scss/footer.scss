@@ -1,0 +1,22 @@
+.footer {
+    background-color: $bg-footer;
+}
+.container {
+}
+.footer-copyright {
+    max-width: 370px;
+    margin: auto;
+    padding: 24px 0;
+    
+    p {
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: $_18px;
+        line-height: 21px;
+        color: $grey-footer;
+    }
+    span {
+        color: $white;
+    }
+}

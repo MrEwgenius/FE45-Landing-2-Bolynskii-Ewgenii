@@ -1,10 +1,11 @@
 {
   "name": "fe45-landing-2-bolynskii-ewgenii",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -16,11 +17,13 @@
     "url": "https://github.com/MrEwgenius/FE45-Landing-2-Bolynskii-Ewgenii/issues"
   },
   "homepage": "https://github.com/MrEwgenius/FE45-Landing-2-Bolynskii-Ewgenii#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "clean-css": "^5.3.2",
+    "concat": "^1.0.3",
+    "parcel": "^2.8.3",
+    "sass": "^1.57.1",
     "server": "^1.0.38"
   },
-  "devDependencies": {
-    "concat": "^1.0.3",
-    "sass": "^1.57.1"
-  }
+  "description": ""
 }

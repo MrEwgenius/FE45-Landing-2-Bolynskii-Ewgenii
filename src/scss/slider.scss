@@ -1,0 +1,55 @@
+.slider {
+}
+.slider-wrap {
+    display: flex;
+    align-items: center;
+    background-color: $bord;
+    flex-wrap: wrap;
+    height: 490px;
+    margin-bottom: 31px;
+}
+.slider-image {
+    height: 100%;
+    object-fit: cover;
+
+    img{
+        width: 100%;
+    }
+}
+.slider-info {
+    margin: auto;
+    max-width: 430px;
+}
+.slider-info--title {
+    // text-align: center;
+    font-family: "Cardo";
+    font-style: italic;
+    font-weight: 400;
+    font-size: $_36px;
+    line-height: 49px;
+    color: $white;
+    margin-bottom: 17px;
+}
+.slider-info--subtitle {
+    // text-align: center;
+    font-weight: 700;
+    font-size: $_13px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $white;
+}
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    a {
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid $bord;
+        &:active{
+            background-color: $bord;
+        }
+    }
+}

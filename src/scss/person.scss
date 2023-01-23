@@ -1,0 +1,105 @@
+.person {
+}
+.person-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 50px;
+    @media (max-width: 1170px) {
+        justify-content: space-around;
+    }
+}
+.person-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 270px;
+    @media (max-width: 1170px) {
+        width: 227px;
+    }
+}
+.person-card--img {
+    margin-bottom: 30px;
+    @media (max-width: 768px) {
+        margin-bottom: 20px;
+    }
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+}
+.person-card--name {
+    font-size: $_24px;
+    line-height: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $grey;
+    margin-bottom: 6px;
+    @media (max-width: 1170px) {
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+.person-card--job {
+    font-size: $_18px;
+    line-height: 21px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $red;
+    margin-bottom: 18px;
+    @media (max-width: 768px) {
+        margin-bottom: 10px;
+    }
+    @media (max-width: 1170px) {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+.person-card--desc {
+    font-size: $_18px;
+    line-height: 21px;
+    font-weight: 400;
+    color: $grey-space;
+    margin-bottom: 38px;
+    flex: 1 1 auto;
+    @media (max-width: 768px) {
+        margin-bottom: 18px;
+    }
+    P {
+        @media (max-width: 1170px) {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+}
+.person-card--link {
+    display: flex;
+    column-gap: 6px;
+}
+.fa-brands {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid $link;
+    width: 39px;
+    height: 39px;
+    font-size: $_18px;
+    color: $link;
+    transition: all 0.2s ease-in;
+    @media (max-width: 768px) {
+        width: 32px;
+        height: 32px;
+    }
+    &:hover {
+        color: rgb(24, 3, 214);
+        border: 1px solid rgb(24, 3, 214);
+        transform: scale(1.05);
+    }
+}
+.fa-linkedin {
+}
+.fa-facebook-f {
+}
+.fa-twitter {
+}

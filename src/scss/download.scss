@@ -1,0 +1,23 @@
+.download {
+    color: $bg-blue;
+}
+.download-title {
+    text-align: center;
+    font-weight: 500;
+    font-size: $_30px;
+    line-height: 12px;
+    color: $black;
+    margin-bottom: 30px;
+}
+.download-subtitle {
+    p {
+        text-align: center;
+        font-weight: 700;
+        font-size: $_18px;
+        line-height: 21px;
+        color: $black;
+        text-transform: uppercase;
+    }
+    margin-bottom: 48px;
+}
+

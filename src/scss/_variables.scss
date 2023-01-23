@@ -1,0 +1,25 @@
+$white: #ffffff;
+$red: #ff4343;
+$black: #000000;
+$grey: #2d3033;
+$grey-space: #6c7279;
+$grey-footer: #808080;
+$bord: #5c3249;
+$bg-white: #e5e5e5;
+$bg-blue: #353c65;
+$bg-footer: #2c3154;
+$link: #c6cbcd;
+$nav-bg: #babbc5;
+$nav-active: #e71414;
+
+$_64px: 4rem;
+$_36px: 2.25rem;
+$_30px: 1.875rem;
+$_24px: 1.5rem;
+$_18px: 1.125rem;
+$_13px: 0.8125rem;
+
+
+@media (max-width: 768px) {
+    $_13px: 0.75rem;
+}

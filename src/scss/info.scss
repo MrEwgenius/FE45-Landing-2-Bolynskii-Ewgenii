@@ -1,0 +1,35 @@
+.info {
+    background-color: $bg-blue;
+}
+.info-wrap {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    flex-wrap: wrap;
+}
+.info-card {
+    max-width: 370px;
+}
+.info-card--title {
+    text-align: center;
+    font-weight: 700;
+    font-size: $_18px;
+    line-height: 21px;
+    margin-bottom: 29px;
+    text-transform: uppercase;
+    color: $white;
+}
+.info-card--subtitle {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    font-size: $_18px;
+    line-height: 21px;
+    color: $white;
+}
+
+.info-card--link {
+    justify-content: center;
+    column-gap: 10px;
+}
+
