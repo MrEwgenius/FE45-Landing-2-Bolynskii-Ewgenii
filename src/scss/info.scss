@@ -1,14 +1,25 @@
 .info {
     background-color: $bg-blue;
+    @media (max-width: 980px) {
+        padding: 70px 0;
+    }
 }
 .info-wrap {
     display: flex;
     justify-content: space-between;
-    column-gap: 30px;
+    column-gap: 20px;
     flex-wrap: wrap;
+    @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+    }
 }
 .info-card {
     max-width: 370px;
+    @media (max-width: 980px) {
+        max-width: 315px;
+    }
 }
 .info-card--title {
     text-align: center;
@@ -18,6 +29,13 @@
     margin-bottom: 29px;
     text-transform: uppercase;
     color: $white;
+    @media (max-width: 800px) {
+    margin-bottom: 15px;
+
+    }
+    @media (max-width: 980px) {
+        font-size: 14px;
+    }
 }
 .info-card--subtitle {
     display: block;
@@ -26,10 +44,14 @@
     font-size: $_18px;
     line-height: 21px;
     color: $white;
+    text-transform: capitalize;
+    @media (max-width: 980px) {
+        font-size: 14px;
+        line-height: 16px;
+    }
 }
 
 .info-card--link {
     justify-content: center;
     column-gap: 10px;
 }
-

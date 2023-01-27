@@ -56,13 +56,14 @@
 .navigation-list--item {
     position: relative;
     cursor: pointer;
-    a{font-weight: 700;
-    font-size: $_13px;
-    line-height: 15px;
-    color: $white;
-    text-transform: uppercase;
+    a {
+        font-weight: 700;
+        font-size: $_13px;
+        line-height: 15px;
+        color: $white;
+        text-transform: uppercase;
     }
-    
+
     @media (max-width: 768px) {
         display: none;
         font-size: 12px;
@@ -110,7 +111,6 @@
     }
     @media (max-width: 500px) {
         font-size: 40px;
-    
     }
     @media (max-width: 320px) {
         font-size: 36px;
@@ -126,7 +126,7 @@
     // @media (max-width: 768px) {
     //     // margin: 0 auto 50px;
     //     // max-width: 280px;
-        
+
     // }
     p {
         font-weight: 400;
@@ -145,15 +145,23 @@
     }
 }
 .main-button {
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 370px;
     height: 80px;
-    font-weight: 900;
-    font-size: $_24px;
-    line-height: 28px;
-    color: $white;
+    margin: auto;
     background-color: $red;
-    text-transform: uppercase;
+    cursor: pointer;
+
+    a {
+        font-weight: 900;
+        font-size: $_24px;
+        line-height: 28px;
+        color: $white;
+        text-transform: uppercase;
+    }
     @media (max-width: 768px) {
         width: 313px;
     }
@@ -169,5 +177,3 @@
         box-shadow: 4px 4px 30px $red;
     }
 }
-
-

@@ -7,7 +7,10 @@
     max-width: 370px;
     margin: auto;
     padding: 24px 0;
-    
+    @media (max-width: 500px) {
+        max-width: 290px;
+    }
+
     p {
         text-align: center;
         text-transform: capitalize;
@@ -15,6 +18,10 @@
         font-size: $_18px;
         line-height: 21px;
         color: $grey-footer;
+        @media (max-width: 500px) {
+            font-size: 14px;
+            line-height: 16px;
+        }
     }
     span {
         color: $white;
