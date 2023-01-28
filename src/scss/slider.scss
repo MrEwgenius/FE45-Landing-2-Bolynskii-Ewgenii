@@ -1,5 +1,4 @@
-.slider {
-}
+
 .slider-wrap {
     cursor: grab;
 }
@@ -16,9 +15,7 @@
     border: 3px solid black;
 }
 .slider-column {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    @include df_jc-sb_fw;
     overflow: hidden;
     @media (max-width: 980px) {
         flex-direction: column;
@@ -33,9 +30,7 @@
         // height: 50%;
     }
     img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        @include img-cover;
         @media (max-width: 980px) {
             max-height: 348px;
         }
@@ -44,6 +39,7 @@
 .swiper-button-next,
 .swiper-rtl,
 .swiper-button-prev {
+    color: $white;
     @media (max-width: 980px) {
         display: none;
     }
@@ -60,7 +56,6 @@
     }
     @media (max-width: 500px) {
         padding: 30px 0 90px 0;
-        
     }
 }
 .slider-bg--blue {
@@ -75,18 +70,12 @@
     @media (max-width: 500px) {
     }
     p {
-        font-family: "Cardo";
-        font-style: italic;
-        font-weight: 400;
-        font-size: $_30px;
-        line-height: 49px;
-        color: $white;
-        text-transform: capitalize;
+        @include info-title;
         @media (max-width: 980px) {
             line-height: 39px;
         }
         @media (max-width: 500px) {
-            font-size: $_24px;
+            font-size: 24px;
             text-align: center;
             padding: 0 17px;
         }
@@ -94,11 +83,7 @@
 }
 .slider-info--subtitle {
     p {
-        font-weight: 700;
-        font-size: $_13px;
-        line-height: 15px;
-        text-transform: uppercase;
-        color: $white;
+        @include info-subtitle;
         @media (max-width: 500px) {
             font-size: $_13px;
             text-align: center;
@@ -130,7 +115,7 @@
     border: 1px solid $bord;
     width: 14px;
     height: 14px;
-    opacity: 1;
+    // opacity: 1;
 }
 .swiper-pagination-bullet-active {
     background-color: $bord;

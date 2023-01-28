@@ -5,10 +5,8 @@
     }
 }
 .info-wrap {
-    display: flex;
-    justify-content: space-between;
+    @include df_jc-sb_fw;
     column-gap: 20px;
-    flex-wrap: wrap;
     @media (max-width: 800px) {
         flex-direction: column;
         align-items: center;
@@ -22,12 +20,8 @@
     }
 }
 .info-card--title {
-    text-align: center;
-    font-weight: 700;
-    font-size: $_18px;
-    line-height: 21px;
+    @include download-subtiitle;
     margin-bottom: 29px;
-    text-transform: uppercase;
     color: $white;
     @media (max-width: 800px) {
     margin-bottom: 15px;
@@ -38,11 +32,9 @@
     }
 }
 .info-card--subtitle {
+    @include desc-desc;
     display: block;
     text-align: center;
-    font-weight: 400;
-    font-size: $_18px;
-    line-height: 21px;
     color: $white;
     text-transform: capitalize;
     @media (max-width: 980px) {
@@ -50,7 +42,6 @@
         line-height: 16px;
     }
 }
-
 .info-card--link {
     justify-content: center;
     column-gap: 10px;

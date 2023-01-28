@@ -11,6 +11,7 @@ $bg-footer: #2c3154;
 $link: #c6cbcd;
 $nav-bg: #babbc5;
 $nav-active: #e71414;
+$main-mask: rgba(37, 43, 73, 0.8);
 
 $_64px: 4rem;
 $_36px: 2.25rem;
@@ -19,7 +20,6 @@ $_24px: 1.5rem;
 $_18px: 1.125rem;
 $_13px: 0.8125rem;
 
-
 @media (max-width: 768px) {
-    $_13px: 0.75rem;
+    // $_13px: 0.75rem;
 }

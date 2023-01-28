@@ -2,10 +2,7 @@
     color: $bg-blue;
 }
 .download-title {
-    text-align: center;
-    font-weight: 500;
-    font-size: $_30px;
-    color: $black;
+    @include download-title;
     margin-bottom: 30px;
     @media (max-width: 500px) {
         font-size: 25px;
@@ -15,14 +12,9 @@
     margin-bottom: 48px;
 
     p {
-        text-align: center;
-        font-weight: 700;
-        font-size: $_18px;
-        line-height: 21px;
-        color: $black;
-        text-transform: uppercase;
+        @include download-subtiitle;
         @media (max-width: 500px) {
-            font-size: 16px;
+            // font-size: 16px;
         }
     }
 }

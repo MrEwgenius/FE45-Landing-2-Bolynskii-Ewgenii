@@ -8,6 +8,7 @@
 }
 .galery-image {
     position: relative;
+
     &:hover::after {
         content: "";
         display: block;
@@ -19,9 +20,46 @@
         height: 100%;
         background: rgba(255, 67, 67, 0.8);
     }
+    &:hover {
+        .galery-image--hover {
+            display: block;
+            width: 100%;
+            height: 100%;
+            z-index: 50;
+        }
+    }
     img {
         display: block;
         max-width: 100%;
         object-fit: cover;
+    }
+}
+.galery-image--hover {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transition: all 0.9s ease-in;
+    h3 {
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 28px;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        @media (max-width: 400px) {
+            font-size: 18px;
+        }
+    }
+    span {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: $white;
+        text-transform: capitalize;
+        @media (max-width: 400px) {
+            font-size: 14px;
+        }
     }
 }

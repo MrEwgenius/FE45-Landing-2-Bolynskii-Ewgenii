@@ -4,13 +4,10 @@
     text-decoration: none;
     box-sizing: border-box;
     list-style: none;
-    
 }
 
-
-
 @import "./_cdn.scss";
-@import "./_variables.scss";
+@import "./variables";
 @import "./_mixin.scss";
 @import "./main.scss";
 @import "./description.scss";
@@ -25,6 +22,16 @@ html,
 body {
     font-family: "Raleway", "Cardo", sans-serif;
     // background-color: rgb(163, 151, 151);
+    // font-size: 16px;
+    // @media (max-width:768px) {
+    //     font-size: 12px;
+    // }
+    // @media (max-width:500px) {
+    //     font-size: 10px;
+    // }
+    // @media (max-width:320px) {
+    //     font-size: 9px;
+    // }
 }
 .none {
     display: none;
@@ -48,4 +55,5 @@ section {
     margin: auto;
     position: relative;
     z-index: 50;
+    overflow: hidden;
 }
