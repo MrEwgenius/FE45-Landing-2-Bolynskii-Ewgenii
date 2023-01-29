@@ -21,7 +21,7 @@
 html,
 body {
     font-family: "Raleway", "Cardo", sans-serif;
-    // background-color: rgb(163, 151, 151);
+    background-color: rgb(163, 151, 151);
     // font-size: 16px;
     // @media (max-width:768px) {
     //     font-size: 12px;
@@ -43,9 +43,7 @@ button {
     cursor: pointer;
     transition: all 0.2s ease-in;
 }
-main {
-    padding: 35px 0;
-}
+
 section {
     padding: 100px 0;
 }
@@ -55,5 +53,5 @@ section {
     margin: auto;
     position: relative;
     z-index: 50;
-    overflow: hidden;
+    // overflow: hidden;
 }

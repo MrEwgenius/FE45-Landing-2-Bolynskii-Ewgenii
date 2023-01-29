@@ -76,8 +76,8 @@
 .person-card--link {
     display: flex;
     column-gap: 6px;
+    // padding-bottom: 2px;
 }
 .fa-brands {
     @include lin-brands;
 }
-

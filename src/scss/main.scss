@@ -3,6 +3,7 @@
     background-size: cover;
     position: relative;
     height: 100vh;
+    padding: 35px 0;
     &::after {
         content: "";
         position: absolute;
@@ -13,11 +14,13 @@
         z-index: 2;
         background-color: $main-mask;
     }
+    @media (max-width: 768px) {
+        padding: 20px 0;
+    }
 }
+
 .navigation {
     margin-bottom: 130px;
-    @media (max-width: 768px) {
-    }
     @media (max-width: 500px) {
         margin-bottom: 80px;
     }
@@ -28,8 +31,12 @@
         max-width: 100%;
         height: 1px;
         background-color: $nav-bg;
+        @media (max-width: 768px) {
+            margin-top: 22px;
+        }
     }
 }
+
 .navigation-wrap {
     @include df_jc-sb_fw;
     align-items: center;
@@ -39,23 +46,46 @@
 .nav-burger {
     display: none;
     cursor: pointer;
+    position: relative;
+    &:hover {
+        .navigation-list--burger {
+            background-color: rgba(22, 27, 39, 0.753);
+            position: absolute;
+            display: block;
+            top: 60px;
+            left: -90px;
+            padding: 20px;
+        }
+    }
     @media (max-width: 768px) {
         display: block;
-        position: absolute;
-        right: 0;
+        position: relative;
+        // right: 0;
     }
 }
-.navihation-list {
+
+.navigation-list {
     @include df_jc-sb_fw;
     gap: 20px;
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 .navigation-list--item {
     position: relative;
     cursor: pointer;
-    @media (max-width: 768px) {
-        display: none;
-        font-size: 12px;
+    &:last-child {
+        margin: 0;
     }
+    @media (max-width: 768px) {
+        cursor: default;
+    }
+    @media (max-width: 768px) {
+        font-size: 15px;
+        line-height: 0px;
+        margin-bottom: 20px;
+    }
+
     a {
         @include nav-list--item;
         & {
@@ -70,6 +100,9 @@
             top: 305%;
             background-color: $nav-bg;
             transition: all 0.2s ease-in;
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
         &:active::after {
             content: "";
@@ -79,10 +112,21 @@
             height: 3px;
             top: 305%;
             background-color: $nav-active;
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
         &:active {
             color: $nav-active;
+            @media (max-width: 768px) {
+                color: white;
+            }
         }
+        // @media (max-width: 768px) {
+        //     font-size: 15px;
+        //     line-height: 0px;
+        //     margin-bottom: 20px;
+        // }
     }
 }
 .main-title {
