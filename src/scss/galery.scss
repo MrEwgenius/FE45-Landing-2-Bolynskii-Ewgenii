@@ -1,32 +1,60 @@
+.galery {
+}
 .galery-wrap {
-    max-width: 1600px;
-    margin: auto;
     display: grid;
     // grid-template-columns: repeat(4, minmax(200px, 375px));
-    grid-template-columns: repeat(auto-fill, minmax(300px, 375px));
-    grid-template-rows: repeat(auto, 335px);
+    // grid-template-columns: repeat(auto-fill, 375px);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: repeat(2, auto);
     justify-content: center;
+    column-gap: 4px;
+    row-gap: 4px;
+    text-align: center;
     align-items: center;
-    gap: 4px;
+    @media (min-width: 1600px) {
+        max-width: 1600px;
+        margin: auto;
+    }
+    @media (max-width: 967px) {
+        grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+        grid-template-rows: repeat(2, auto);
+    }
+    @media (max-width: 515px) {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: repeat(2, auto);
+    }
 }
 .galery-image {
+    line-height: 0;
     transition: all 0.2s ease-in;
     position: relative;
-    @media (max-width: 700px) {
+    overflow: hidden;
+    @media (max-width: 1291px) {
+        &:nth-last-child(-n + 2) {
+            display: none;
+        }
+    }
+    @media (max-width: 967px) {
+    }
+    @media (max-width: 515px) {
+        &:nth-last-child(-n + 2) {
+            display: block;
+        }
         &:nth-child(even) {
             display: none;
         }
     }
     &::after {
         content: "";
-        opacity: 0;
+        pointer-events: none;
         position: absolute;
-        transition: all 0.2s ease-in;
-        z-index: 40;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        opacity: 0;
+        transition: all 0.2s ease-in;
+        z-index: 40;
         background: rgba(255, 67, 67, 0.8);
     }
     &:hover::after {
@@ -42,16 +70,18 @@
         }
     }
     img {
-        display: block;
-        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-position: center;
         object-fit: cover;
     }
 }
 .galery-image--hover {
+    width: 183px;
     pointer-events: none;
     opacity: 0;
     transition: all 0.2s ease-in;
-    vertical-align: middle;
+    // vertical-align: middle;
     text-align: center;
     position: absolute;
     top: 50%;

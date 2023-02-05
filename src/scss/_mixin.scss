@@ -92,8 +92,8 @@
     color: $link;
     transition: all 0.2s ease-in;
     @media (max-width: 768px) {
-        width: 32px;
-        height: 32px;
+        // width: 32px;
+        // height: 32px;
     }
     &:hover {
         color: rgb(24, 3, 214);

@@ -7,7 +7,17 @@
         justify-content: space-evenly;
     }
     @media (max-width: 1170px) {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        column-gap: 0;
+    }
+    @media (max-width: 650px) {
+        grid-template-columns: repeat(1, 1fr);
+
     }
 }
 .person-card {
@@ -15,28 +25,32 @@
     flex-direction: column;
     width: 270px;
     @media (max-width: 1170px) {
-        width: 227px;
+        // width: 227px;
     }
-    @media (max-width: 502px) {
-        width: 280px;
+    @media (max-width: 650px) {
+        width: 90%;
+        align-items: center;
     }
 }
 .person-card--img {
     margin-bottom: 30px;
+    line-height: 0;
     @media (max-width: 768px) {
         margin-bottom: 20px;
     }
     img {
-        object-fit: cover;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }
 .person-card--name {
     @include person-card--name;
     margin-bottom: 6px;
     @media (max-width: 1000px) {
-        font-size: 18px;
-        line-height: 21px;
+        // font-size: 18px;
+        // line-height: 21px;
     }
     flex: 1 1 auto;
 }
@@ -47,13 +61,13 @@
         @include desc-desc;
         text-transform: uppercase;
         color: $red;
-        @media (max-width: 1170px) {
-            font-size: 16px;
-        }
-        @media (max-width: 1000px) {
-            font-size: 14px;
-            line-height: 16px;
-        }
+        // @media (max-width: 1170px) {
+        //     font-size: 16px;
+        // }
+        // @media (max-width: 1000px) {
+        //     font-size: 14px;
+        //     line-height: 16px;
+        // }
     }
     @media (max-width: 768px) {
         margin-bottom: 15px;
@@ -67,9 +81,10 @@
     }
     p {
         @include desc-desc;
-        @media (max-width: 1000px) {
-            font-size: 14px;
-            line-height: 16px;
+        @media (max-width: 650px) {
+            text-align: center;
+            // font-size: 14px;
+            // line-height: 16px;
         }
     }
 }
