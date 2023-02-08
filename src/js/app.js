@@ -7,7 +7,6 @@ const swiper = new Swiper('.swiper', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        //   dynamicBullets: true
     },
 
     // Navigation arrows
@@ -23,7 +22,7 @@ const swiper = new Swiper('.swiper', {
     },
 
     autoHeight: true,
-    spaceBetween: 15,
+    spaceBetween: 10,
 
     autoplay: {
         delay: 5000,

@@ -17,10 +17,13 @@
 @import "./download.scss";
 @import "./info.scss";
 @import "./footer.scss";
-
+.lock-scroll {
+    overflow: hidden;
+}
 html,
 body {
     font-family: "Raleway", "Cardo", sans-serif;
+
     // background-color: rgb(163, 151, 151);
 
     // font-size: 16px;

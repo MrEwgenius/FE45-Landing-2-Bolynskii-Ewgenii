@@ -51,15 +51,8 @@
     display: none;
     cursor: pointer;
     position: relative;
-    &:hover {
-        .navigation-list--burger {
-            background-color: rgba(22, 27, 39, 0.753);
-            position: absolute;
-            display: block;
-            top: 60px;
-            left: -90px;
-            padding: 20px;
-        }
+    img {
+        pointer-events: none;
     }
     @media (max-width: 768px) {
         display: block;
@@ -69,28 +62,65 @@
 
 .navigation-list {
     @include df_jc-sb_fw;
-    gap: 50px;
+    gap: 40px;
+    position: relative;
     @media (max-width: 768px) {
-        display: none;
+        // display: none;
+    }
+}
+.navigation-list--burger {
+    @media (max-width: 768px) {
+        background: url("../img/bg.jpg") -60px no-repeat;
+        background-size: cover;
+        align-items: center;
+        width: 40%;
+        height: 50%;
+        border-radius: 20px;
+        padding: 20px 0;
+        // border: 1px solid black;
+        position: fixed;
+        transition: all 0.5s ease-in-out;
+        top: 80px;
+        right: -180%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 20px;
+        @media (max-width: 560px) {
+            width: 60%;
+            background: url("../img/bg.jpg") -170px no-repeat;
+        }
+    }
+}
+.navigation-list--active {
+    
+    @media (max-width: 768px) {
+        body, html {
+        // pointer-events: none;
+        }
+        top: 80px;
+        right: 0;
     }
 }
 .navigation-list--item {
     position: relative;
-    cursor: pointer;
     &:last-child {
         margin: 0;
     }
+
     @media (max-width: 768px) {
-        cursor: default;
-    }
-    @media (max-width: 768px) {
-        font-size: 15px;
-        line-height: 0px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
     a {
+        cursor: pointer;
+
         @include nav-list--item;
+        @media (max-width: 768px) {
+            font-size: 25px;
+            line-height: 0px;
+            margin-bottom: 20px;
+        }
         & {
             transition: all 0.2s ease-in;
         }
@@ -104,7 +134,9 @@
             background-color: $nav-bg;
             transition: all 0.2s ease-in;
             @media (max-width: 768px) {
-                display: none;
+                top: 105%;
+
+                // display: none;
             }
         }
         &:active::after {
@@ -116,13 +148,14 @@
             top: 305%;
             background-color: $nav-active;
             @media (max-width: 768px) {
-                display: none;
+                // display: none;
+                top: 105%;
             }
         }
         &:active {
             color: $nav-active;
             @media (max-width: 768px) {
-                color: white;
+                color: $nav-active;
             }
         }
     }
